@@ -220,8 +220,8 @@ pcl_library(
     name = "kdtree",
     deps = [
         ":common",
-        # TODO flann. Seems to work anyway?
         "@boost//:smart_ptr",
+        "@flann//:flann",
     ],
 )
 
@@ -463,9 +463,9 @@ pcl_library(
         ":common",
         ":kdtree",
         ":octree",
-        # TODO flann. Seems to work anyway?
         "@boost//:smart_ptr",
         "@eigen//:eigen",
+        "@flann//:flann",
     ],
 )
 
