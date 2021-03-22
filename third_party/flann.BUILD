@@ -144,11 +144,16 @@ FLANN_DEPS = BOOST_TARGETS + [ "@lz4//:lz4" ] #"@hdf5//:hdf5",
 cc_library(
     name = "flann",
     srcs = glob([
-        "src/cpp/*.cpp",
+        "src/cpp/**/*.cpp",
+    ], [
+        "src/cpp/flann/mpi/**/*"
     ]),
     hdrs = glob([
-        "src/cpp/*.h",
-        "src/cpp/*.hpp",
+        "src/cpp/**/*.h",
+        "src/cpp/**/*.hpp",
+    ], [
+        "src/cpp/flann/mpi/**/*",
+        "src/cpp/flann/io/hdf5.h",
     ]),
     copts = FLANN_COPTS,
     includes = [

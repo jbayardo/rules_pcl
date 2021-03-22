@@ -205,6 +205,7 @@ pcl_library(
         "@boost//:iostreams",
         "@boost//:math",
         "@boost//:mpl",
+        "@boost//:multiprecision",
         "@boost//:numeric_conversion",
         "@boost//:property_tree",
         "@boost//:signals2",
